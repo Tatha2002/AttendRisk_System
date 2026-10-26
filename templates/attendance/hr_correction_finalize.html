@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Correction Finalization</title>
+</head>
+<body>
+    <h1>HR Admin — Finalize Corrections</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Request ID</th>
+                <th>Employee</th>
+                <th>Date</th>
+                <th>Requested Time</th>
+                <th>Punch Type</th>
+                <th>Reason</th>
+                <th>Manager Comment</th>
+                <th>HR Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for correction in corrections %}
+                <tr>
+                    <td>{{ correction.id }}</td>
+                    <td>
+                        {{ correction.employee.name }}
+                        ({{ correction.employee.employee_code }})
+                    </td>
+                    <td>{{ correction.correction_date }}</td>
+                    <td>{{ correction.requested_punch_time }}</td>
+                    <td>{{ correction.requested_punch_type }}</td>
+                    <td>{{ correction.reason }}</td>
+                    <td>{{ correction.manager_comment|default:"-" }}</td>
+                    <td>
+                        <form method="post">
+                            {% csrf_token %}
+                            <input
+                                type="hidden"
+                                name="correction_id"
+                                value="{{ correction.id }}"
+                            >
+                            <textarea
+                                name="hr_comment"
+                                rows="2"
+                                maxlength="1000"
+                                placeholder="Optional HR comment"
+                            ></textarea>
+                            <button type="submit">
+                                Finalize Correction
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="8">
+                        No manager-approved corrections awaiting finalization.
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

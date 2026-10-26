@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Correction Request</title>
+</head>
+<body>
+    <h1>Attendance Correction Request</h1>
+
+    <p>
+        Employee:
+        {{ employee.name }} ({{ employee.employee_code }})
+    </p>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    {% if form.errors %}
+        <div>
+            {{ form.errors }}
+        </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Submit Correction Request</button>
+    </form>
+
+    <p>
+        <a href="{% url 'attendance-list' %}">
+            Back to Attendance Records
+        </a>
+    </p>
+</body>
+</html>

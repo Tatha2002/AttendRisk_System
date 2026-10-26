@@ -1,0 +1,5 @@
+employee_code,employee_name,department,punch_date,punch_time,device_location,punch_type,shift_start,shift_end,leave_type,manager_code,remarks
+EMP003,Mira Das,Engineering,2026-10-26,09:00,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP003,Mira Das,Engineering,2026-10-26,09:00,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+WRONG,Mira Das,Engineering,2026-10-26,09:00,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP003,Mira Das,Engineering,2026-10-26,25:99,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival

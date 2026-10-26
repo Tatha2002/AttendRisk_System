@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Correction Review</title>
+</head>
+<body>
+    <h1>Attendance Correction Reviews</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee</th>
+                <th>Date</th>
+                <th>Original Punch</th>
+                <th>Requested Punch</th>
+                <th>Reason</th>
+                <th>Manager Comment</th>
+                <th>Decision</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for correction in corrections %}
+                <tr>
+                    <td>{{ correction.id }}</td>
+                    <td>
+                        {{ correction.employee.name }}
+                        ({{ correction.employee.employee_code }})
+                    </td>
+                    <td>{{ correction.correction_date }}</td>
+                    <td>
+                        {% if correction.attendance_log %}
+                            {{ correction.attendance_log.punch_date }}
+                            {{ correction.attendance_log.punch_time }}
+                            ({{ correction.attendance_log.punch_type }})
+                        {% else %}
+                            No original punch selected
+                        {% endif %}
+                    </td>
+                    <td>
+                        {{ correction.requested_punch_time }}
+                        ({{ correction.requested_punch_type }})
+                    </td>
+                    <td>{{ correction.reason }}</td>
+                    <td>
+                        <form method="post">
+                            {% csrf_token %}
+                            <input
+                                type="hidden"
+                                name="correction_id"
+                                value="{{ correction.id }}"
+                            >
+                            <textarea
+                                name="manager_comment"
+                                rows="2"
+                                maxlength="1000"
+                                placeholder="Optional comment"
+                            ></textarea>
+                    </td>
+                    <td>
+                            <button
+                                type="submit"
+                                name="decision"
+                                value="approve"
+                            >
+                                Approve
+                            </button>
+                            <button
+                                type="submit"
+                                name="decision"
+                                value="reject"
+                            >
+                                Reject
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="8">
+                        No pending correction requests.
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

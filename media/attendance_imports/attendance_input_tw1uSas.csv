@@ -1,0 +1,8 @@
+employee_code,employee_name,department,punch_date,punch_time,device_location,punch_type,shift_start,shift_end,leave_type,manager_code,remarks
+EMP001,Rahul Das, IT ,2026-10-26,09:15, Main Gate , in,09:00,18:00,,MGR001,Traffic delay
+EMP001,Rahul Das,IT,2026-10-26,18:05,Main Gate,OUT,09:00,18:00,,MGR001,Normal day
+EMP002,Priya Sen,Human Resources,2026-10-26,09:30,Office Gate,IN,09:00,18:00,,MGR002,Late bus
+EMP002,Priya Sen,Human Resources,2026-10-26,09:30,Office Gate,IN,09:00,18:00,,MGR002,Duplicate punch
+EMP002,Priya Sen,Human Resources,2026-10-26,17:55,Office Gate,OUT,09:00,18:00,,MGR002,Normal exit
+EMP003,Amit Roy,Finance,2026-10-26,09:05,North Gate,IN,09:00,18:00,,MGR003,
+EMP004,Neha Paul, IT ,2026-10-26,09:00,Main Gate,IN,09:00,18:00,,MGR001,Missing exit punch

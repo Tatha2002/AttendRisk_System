@@ -1,0 +1,25 @@
+employee_code,employee_name,department,punch_date,punch_time,device_location,punch_type,shift_start,shift_end,leave_type,manager_code,remarks
+EMP003,Mira Das,Engineering,2026-10-26,09:00,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP003,Mira Das,Engineering,2026-10-26,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP003,Mira Das,Engineering,2026-10-25,09:07,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP003,Mira Das,Engineering,2026-10-25,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP003,Mira Das,Engineering,2026-10-24,09:14,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP003,Mira Das,Engineering,2026-10-24,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP004,Arjun Roy,Operations,2026-10-26,09:11,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP004,Arjun Roy,Operations,2026-10-26,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP004,Arjun Roy,Operations,2026-10-25,09:18,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP004,Arjun Roy,Operations,2026-10-25,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP004,Arjun Roy,Operations,2026-10-24,09:25,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP004,Arjun Roy,Operations,2026-10-24,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP005,Sara Ali,Operations,2026-10-26,09:22,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP005,Sara Ali,Operations,2026-10-26,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP005,Sara Ali,Operations,2026-10-25,09:29,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP005,Sara Ali,Operations,2026-10-25,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP005,Sara Ali,Operations,2026-10-24,09:36,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP005,Sara Ali,Operations,2026-10-24,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP006,Dev Mehta,Finance,2026-10-26,09:33,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP006,Dev Mehta,Finance,2026-10-26,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP006,Dev Mehta,Finance,2026-10-25,09:40,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP006,Dev Mehta,Finance,2026-10-25,18:05,main office,OUT,09:00,18:00,,EMP002,
+EMP006,Dev Mehta,Finance,2026-10-24,09:47,main office,IN,09:00,18:00,,EMP002,Traffic delayed arrival
+EMP006,Dev Mehta,Finance,2026-10-24,18:05,main office,OUT,09:00,18:00,,EMP002,

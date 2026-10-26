@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input, button, a {
+            padding: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #f2f2f2;
+        }
+
+        .late {
+            color: #b42318;
+            font-weight: bold;
+        }
+
+        .normal {
+            color: #067647;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Attendance Records</h1>
+
+    <p>Total matching records: {{ total_records }}</p>
+
+    <form method="get">
+        <input
+            type="text"
+            name="search"
+            placeholder="Employee code, name, or email"
+            value="{{ search }}"
+        >
+
+        <input
+            type="date"
+            name="date"
+            value="{{ selected_date }}"
+        >
+
+        <label>
+            <input
+                type="checkbox"
+                name="late"
+                value="1"
+                {% if late_only %}checked{% endif %}
+            >
+            Late punches only
+        </label>
+
+        <button type="submit">Filter</button>
+        <a href="{% url 'attendance-list' %}">Clear filters</a>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Employee Code</th>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Punch Type</th>
+                <th>Late</th>
+                <th>Delay (minutes)</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for record in page_obj %}
+                <tr>
+                    <td>{{ record.employee.employee_code }}</td>
+                    <td>{{ record.employee.name }}</td>
+                    <td>{{ record.employee.department.name }}</td>
+                    <td>{{ record.punch_date|date:"Y-m-d" }}</td>
+                    <td>{{ record.punch_time|time:"H:i" }}</td>
+                    <td>{{ record.punch_type }}</td>
+
+                    <td>
+                        {% if record.is_late %}
+                            <span class="late">Yes</span>
+                        {% else %}
+                            <span class="normal">No</span>
+                        {% endif %}
+                    </td>
+
+                    <td>{{ record.delay_minutes }}</td>
+                    <td>{{ record.device_location|default:"-" }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="9">No attendance records found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div>
+        {% if page_obj.has_previous %}
+            <a href="?search={{ search|urlencode }}&date={{ selected_date }}&late={% if late_only %}1{% endif %}&page=1">
+                First
+            </a>
+            <a href="?search={{ search|urlencode }}&date={{ selected_date }}&late={% if late_only %}1{% endif %}&page={{ page_obj.previous_page_number }}">
+                Previous
+            </a>
+        {% endif %}
+
+        <span>
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?search={{ search|urlencode }}&date={{ selected_date }}&late={% if late_only %}1{% endif %}&page={{ page_obj.next_page_number }}">
+                Next
+            </a>
+            <a href="?search={{ search|urlencode }}&date={{ selected_date }}&late={% if late_only %}1{% endif %}&page={{ page_obj.paginator.num_pages }}">
+                Last
+            </a>
+        {% endif %}
+    </div>
+
+    <p>
+        <a href="{% url 'attendance-upload' %}">Back to CSV Upload</a>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+row_number,employee_code,employee_name,punch_date,punch_time,anomaly_type,details
+4,EMP002,Priya Sen,2026-10-26,09:30,LATE_ARRIVAL,30 minutes after shift start; grace period is 15 minutes.
+5,EMP002,Priya Sen,2026-10-26,09:30,DUPLICATE_PUNCH,Duplicate biometric punch detected.
+,EMP003,Amit Roy,2026-10-26,,MISSING_PUNCH,Missing OUT punch.
+,EMP004,Neha Paul,2026-10-26,,MISSING_PUNCH,Missing OUT punch.

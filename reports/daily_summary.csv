@@ -1,0 +1,5 @@
+employee_code,employee_name,department,punch_date,first_in,last_out,punch_count,late_count,duplicate_count,leave_rows,working_hours,missing_punches
+EMP001,Rahul Das,It,2026-10-26,09:15,18:05,2,0,0,0,8.83,
+EMP002,Priya Sen,Human resources,2026-10-26,09:30,17:55,2,1,1,0,8.42,
+EMP003,Amit Roy,Finance,2026-10-26,09:05,,1,0,0,0,,OUT
+EMP004,Neha Paul,It,2026-10-26,09:00,,1,0,0,0,,OUT

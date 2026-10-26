@@ -1,0 +1,4 @@
+row_number,employee_code,employee_name,punch_date,issue,details
+5,EMP002,Priya Sen,2026-10-26,DUPLICATE_PUNCH,Verify and remove duplicate punch.
+,EMP003,Amit Roy,2026-10-26,MISSING_PUNCH,Missing OUT punch.
+,EMP004,Neha Paul,2026-10-26,MISSING_PUNCH,Missing OUT punch.

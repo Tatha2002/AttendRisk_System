@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance CSV Upload</title>
+</head>
+<body>
+    <h1>Attendance Management</h1>
+    <h2>Upload Attendance CSV</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    {% if form.errors %}
+        <div>
+            {{ form.errors }}
+        </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Upload and Process CSV</button>
+    </form>
+
+    <hr>
+
+    <h2>Recent Import Batches</h2>
+
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>Batch ID</th>
+                <th>Uploaded At</th>
+                <th>Status</th>
+                <th>Total Rows</th>
+                <th>Successful Rows</th>
+                <th>Failed Rows</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for batch in batches %}
+                <tr>
+                    <td>{{ batch.id }}</td>
+                    <td>{{ batch.uploaded_at }}</td>
+                    <td>{{ batch.status }}</td>
+                    <td>{{ batch.total_rows }}</td>
+                    <td>{{ batch.successful_rows }}</td>
+                    <td>{{ batch.failed_rows }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No attendance files uploaded yet.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

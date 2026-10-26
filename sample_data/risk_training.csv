@@ -1,0 +1,401 @@
+late_count,absent_count,correction_count,leave_count,average_delay_minutes,department,risk_label,unused_reference
+3,0,4,1,15.62,Engineering,0,demo-0
+2,4,6,0,2.09,Operations,1,demo-1
+0,4,3,5,45.49,Human Resources,1,demo-2
+8,6,0,1,48.87,Finance,1,demo-3
+6,6,5,0,6.49,Engineering,1,demo-4
+11,4,4,0,51.08,Engineering,0,demo-5
+12,0,8,2,58.06,Finance,1,demo-6
+2,0,3,2,68.97,Operations,0,demo-7
+12,2,7,5,58.39,Operations,1,demo-8
+6,5,4,5,65.57,Engineering,1,demo-9
+5,4,3,1,32.36,Finance,0,demo-10
+7,5,5,0,16.03,Engineering,0,demo-11
+12,2,1,1,63.92,Finance,1,demo-12
+15,3,7,1,18.54,Operations,1,demo-13
+8,5,6,4,27.96,Operations,0,demo-14
+4,4,7,0,52.9,Engineering,1,demo-15
+5,6,6,4,4.45,Human Resources,1,demo-16
+14,4,4,4,60.25,Engineering,1,demo-17
+3,5,8,2,53.8,Finance,1,demo-18
+13,1,7,0,66.77,Finance,0,demo-19
+5,4,1,5,20.89,Operations,1,demo-20
+5,4,8,0,41.93,Human Resources,1,demo-21
+11,6,4,1,4.05,Engineering,1,demo-22
+15,6,1,4,53.61,Operations,1,demo-23
+5,2,8,4,29.62,Operations,0,demo-24
+6,5,4,3,69.66,Finance,1,demo-25
+14,0,3,1,4.48,Engineering,0,demo-26
+7,4,3,0,4.97,Engineering,1,demo-27
+1,6,5,0,35.99,Finance,0,demo-28
+6,4,2,5,65.49,Human Resources,1,demo-29
+15,6,6,1,6.6,Human Resources,1,demo-30
+13,3,0,5,45.74,Engineering,1,demo-31
+10,6,1,1,13.41,Human Resources,1,demo-32
+5,2,7,1,61.21,Engineering,1,demo-33
+3,0,8,0,67.83,Operations,1,demo-34
+15,3,3,3,63.17,Operations,1,demo-35
+12,2,7,2,29.61,Human Resources,1,demo-36
+9,1,0,4,51.5,Engineering,0,demo-37
+1,0,7,4,64.36,Operations,1,demo-38
+2,6,2,0,41.65,Operations,1,demo-39
+7,4,0,4,5.74,Finance,0,demo-40
+6,5,5,1,18.59,Operations,0,demo-41
+9,3,5,0,0.65,Engineering,1,demo-42
+6,4,4,1,65.33,Engineering,0,demo-43
+11,2,2,3,58.36,Finance,1,demo-44
+0,5,8,2,65.22,Engineering,0,demo-45
+4,2,1,0,51.97,Operations,1,demo-46
+6,5,5,1,48.12,Finance,1,demo-47
+8,6,0,0,44.4,Finance,1,demo-48
+10,6,2,5,68.59,Operations,1,demo-49
+13,4,0,0,5.27,Operations,1,demo-50
+11,4,8,1,30.09,Engineering,1,demo-51
+1,2,3,5,17.47,Engineering,0,demo-52
+13,4,2,1,60.52,Operations,1,demo-53
+0,1,5,3,56.16,Operations,0,demo-54
+3,3,0,3,15.57,Human Resources,0,demo-55
+7,1,0,5,13.52,Finance,0,demo-56
+2,6,4,2,44.9,Human Resources,1,demo-57
+10,0,1,2,12.5,Finance,1,demo-58
+13,2,5,3,42.43,Engineering,1,demo-59
+6,2,0,5,30.52,Operations,0,demo-60
+2,5,5,4,21.97,Engineering,0,demo-61
+9,4,4,5,28.59,Human Resources,1,demo-62
+4,1,6,5,65.83,Operations,0,demo-63
+9,3,8,0,21.27,Operations,1,demo-64
+10,3,7,3,47.29,Human Resources,1,demo-65
+5,5,1,2,36.08,Finance,1,demo-66
+7,5,4,1,56.46,Operations,1,demo-67
+7,3,1,3,29.01,Operations,0,demo-68
+12,3,6,1,10.33,Engineering,0,demo-69
+3,6,6,1,12.31,Human Resources,1,demo-70
+7,6,1,3,9.33,Human Resources,1,demo-71
+10,6,7,4,57.05,Human Resources,1,demo-72
+14,1,7,3,18.14,Operations,0,demo-73
+8,6,8,3,43.87,Finance,1,demo-74
+9,1,4,2,22.38,Engineering,1,demo-75
+7,3,2,5,14.98,Human Resources,0,demo-76
+14,3,0,1,58.3,Human Resources,0,demo-77
+0,6,6,3,0.41,Finance,1,demo-78
+12,6,6,4,52.33,Operations,1,demo-79
+8,3,7,0,27.22,Human Resources,0,demo-80
+14,1,8,0,63.49,Engineering,1,demo-81
+13,1,7,1,3.52,Human Resources,1,demo-82
+14,2,5,3,19.48,Human Resources,1,demo-83
+2,3,0,5,37.76,Finance,1,demo-84
+2,6,0,0,66.47,Operations,0,demo-85
+4,1,2,3,46.86,Operations,0,demo-86
+8,6,5,1,42.41,Engineering,1,demo-87
+5,2,1,4,1.8,Finance,0,demo-88
+12,3,3,0,41.45,Operations,1,demo-89
+9,6,1,4,54.78,Finance,1,demo-90
+11,0,8,5,23.89,Human Resources,0,demo-91
+3,3,5,5,62.41,Human Resources,0,demo-92
+13,1,8,5,18.91,Human Resources,1,demo-93
+8,2,3,0,19.52,Human Resources,1,demo-94
+14,4,6,2,2.01,Finance,1,demo-95
+6,2,4,2,19.58,Finance,0,demo-96
+6,0,3,5,28.45,Operations,0,demo-97
+15,3,0,0,20.6,Human Resources,1,demo-98
+9,5,5,3,38.74,Finance,1,demo-99
+10,2,7,2,21.46,Operations,1,demo-100
+6,2,1,5,37.51,Operations,1,demo-101
+15,2,8,4,19.81,Engineering,0,demo-102
+9,1,5,1,21.16,Operations,1,demo-103
+1,4,4,5,66.09,Human Resources,1,demo-104
+0,4,4,3,33.51,Finance,1,demo-105
+1,2,7,0,57.55,Human Resources,0,demo-106
+1,1,2,4,66.44,Engineering,0,demo-107
+3,4,6,4,41.73,Operations,0,demo-108
+12,3,7,2,60.21,Human Resources,1,demo-109
+1,4,1,1,43.79,Finance,0,demo-110
+5,1,2,4,5.25,Engineering,0,demo-111
+15,2,0,1,20.17,Finance,0,demo-112
+14,0,3,2,55.15,Operations,1,demo-113
+7,5,2,2,57.86,Engineering,1,demo-114
+9,4,4,3,8.7,Finance,0,demo-115
+8,4,8,3,30.64,Engineering,0,demo-116
+10,4,4,0,6.39,Engineering,0,demo-117
+8,4,0,1,32.94,Human Resources,0,demo-118
+5,4,6,5,57.0,Engineering,1,demo-119
+13,2,5,5,7.32,Operations,1,demo-120
+15,2,6,4,2.57,Engineering,1,demo-121
+10,0,6,4,57.74,Engineering,0,demo-122
+14,3,0,1,36.29,Human Resources,1,demo-123
+1,1,4,4,9.17,Finance,0,demo-124
+15,0,0,5,42.62,Operations,0,demo-125
+9,4,0,4,28.56,Operations,0,demo-126
+3,3,1,5,58.25,Human Resources,0,demo-127
+9,4,4,3,58.43,Human Resources,1,demo-128
+4,3,3,4,35.58,Operations,0,demo-129
+8,6,6,2,65.4,Finance,1,demo-130
+9,5,4,4,40.59,Human Resources,0,demo-131
+14,4,7,2,23.27,Human Resources,1,demo-132
+10,6,3,5,16.72,Human Resources,1,demo-133
+13,0,5,5,33.11,Human Resources,1,demo-134
+4,3,0,1,35.16,Finance,0,demo-135
+14,0,8,3,1.07,Operations,1,demo-136
+4,0,7,2,23.7,Human Resources,0,demo-137
+10,6,8,3,66.79,Human Resources,1,demo-138
+1,4,1,1,44.18,Finance,0,demo-139
+2,3,1,5,49.27,Engineering,0,demo-140
+9,0,0,2,55.73,Finance,0,demo-141
+13,1,3,4,28.84,Operations,1,demo-142
+2,4,6,4,47.82,Human Resources,0,demo-143
+4,1,7,5,17.78,Finance,0,demo-144
+14,2,8,1,5.17,Finance,0,demo-145
+9,5,6,5,17.51,Finance,1,demo-146
+12,6,7,0,16.6,Finance,1,demo-147
+9,0,6,2,0.57,Engineering,0,demo-148
+15,6,4,1,42.49,Finance,1,demo-149
+6,4,4,5,52.89,Operations,1,demo-150
+1,2,7,0,40.57,Operations,1,demo-151
+9,2,6,1,14.06,Finance,0,demo-152
+8,6,2,2,63.98,Human Resources,0,demo-153
+9,5,5,0,32.78,Engineering,1,demo-154
+7,6,6,4,25.6,Human Resources,1,demo-155
+3,3,5,5,52.43,Finance,0,demo-156
+11,0,3,3,1.75,Finance,0,demo-157
+7,5,1,5,57.67,Finance,1,demo-158
+3,1,0,0,21.31,Human Resources,0,demo-159
+7,4,2,3,31.76,Human Resources,1,demo-160
+4,3,1,3,43.1,Finance,1,demo-161
+11,1,7,3,66.54,Finance,1,demo-162
+11,4,5,0,27.87,Operations,0,demo-163
+14,0,3,5,44.76,Engineering,1,demo-164
+10,1,2,4,14.36,Operations,0,demo-165
+7,2,2,4,0.2,Operations,0,demo-166
+8,6,2,0,46.27,Engineering,1,demo-167
+11,6,3,4,22.66,Operations,1,demo-168
+4,5,6,4,7.96,Engineering,1,demo-169
+11,4,1,3,35.27,Engineering,1,demo-170
+9,3,0,0,69.9,Human Resources,1,demo-171
+3,3,7,0,62.95,Finance,0,demo-172
+2,1,4,4,44.32,Finance,0,demo-173
+9,3,8,4,30.11,Engineering,0,demo-174
+6,3,7,1,28.97,Human Resources,1,demo-175
+3,2,6,2,46.56,Finance,0,demo-176
+15,0,1,0,6.53,Engineering,0,demo-177
+11,6,2,4,4.2,Finance,1,demo-178
+13,2,6,5,3.6,Finance,1,demo-179
+11,0,8,1,10.83,Human Resources,1,demo-180
+3,2,8,2,8.04,Finance,0,demo-181
+13,6,8,4,42.95,Engineering,1,demo-182
+8,0,2,2,49.19,Finance,0,demo-183
+11,0,2,1,39.64,Human Resources,1,demo-184
+0,0,8,1,26.33,Human Resources,0,demo-185
+11,2,5,4,41.74,Engineering,1,demo-186
+1,5,1,2,31.02,Human Resources,0,demo-187
+14,3,4,1,52.85,Engineering,1,demo-188
+3,2,7,4,46.7,Engineering,1,demo-189
+1,0,3,2,66.17,Operations,0,demo-190
+9,2,1,0,34.82,Human Resources,1,demo-191
+12,4,3,4,39.11,Finance,1,demo-192
+1,3,0,3,64.48,Finance,0,demo-193
+12,5,6,2,8.06,Engineering,0,demo-194
+5,6,7,5,64.38,Engineering,1,demo-195
+3,1,6,4,28.03,Engineering,0,demo-196
+9,5,5,1,23.31,Operations,1,demo-197
+3,4,8,1,63.41,Finance,1,demo-198
+4,1,1,1,17.92,Operations,0,demo-199
+2,1,7,3,52.81,Human Resources,0,demo-200
+10,6,5,1,30.78,Human Resources,1,demo-201
+9,6,4,4,3.93,Engineering,1,demo-202
+14,0,0,2,58.22,Engineering,0,demo-203
+2,4,8,3,32.39,Engineering,1,demo-204
+6,2,7,4,10.56,Engineering,0,demo-205
+10,5,1,4,45.23,Engineering,1,demo-206
+14,3,8,4,42.69,Finance,1,demo-207
+9,3,6,2,47.52,Engineering,0,demo-208
+10,0,5,0,39.06,Human Resources,1,demo-209
+4,2,1,4,46.45,Finance,0,demo-210
+12,1,1,2,39.12,Finance,0,demo-211
+2,5,6,4,25.33,Finance,1,demo-212
+6,2,7,1,15.86,Operations,1,demo-213
+9,6,1,4,53.96,Engineering,1,demo-214
+4,4,6,1,11.36,Operations,0,demo-215
+1,3,5,5,50.37,Human Resources,0,demo-216
+14,1,8,1,21.66,Human Resources,0,demo-217
+6,2,7,3,53.86,Human Resources,1,demo-218
+13,1,3,4,9.69,Finance,1,demo-219
+15,6,5,4,65.4,Engineering,1,demo-220
+5,2,7,4,10.31,Human Resources,1,demo-221
+7,6,7,2,65.13,Human Resources,1,demo-222
+11,1,6,0,26.24,Engineering,1,demo-223
+3,6,5,1,9.63,Finance,0,demo-224
+15,5,2,5,32.84,Engineering,1,demo-225
+0,2,3,1,38.42,Human Resources,1,demo-226
+9,1,4,0,3.34,Human Resources,0,demo-227
+14,0,1,3,41.77,Engineering,0,demo-228
+7,5,2,2,30.05,Finance,1,demo-229
+13,1,1,4,68.23,Engineering,0,demo-230
+0,3,7,0,44.5,Finance,1,demo-231
+0,2,1,2,16.88,Engineering,0,demo-232
+10,1,0,2,38.22,Operations,0,demo-233
+14,5,7,5,12.76,Operations,1,demo-234
+14,0,4,1,3.07,Operations,0,demo-235
+10,2,8,3,69.24,Human Resources,1,demo-236
+6,2,5,0,60.61,Finance,1,demo-237
+11,3,6,5,30.78,Human Resources,1,demo-238
+5,3,7,2,64.7,Finance,0,demo-239
+13,0,6,4,69.66,Operations,1,demo-240
+10,0,1,2,46.26,Finance,0,demo-241
+13,1,7,2,31.3,Finance,1,demo-242
+13,2,0,0,46.98,Human Resources,1,demo-243
+5,0,2,4,47.47,Human Resources,1,demo-244
+2,1,5,2,26.8,Engineering,0,demo-245
+14,2,5,3,53.42,Operations,1,demo-246
+12,2,4,1,67.24,Engineering,1,demo-247
+15,4,6,4,8.24,Finance,1,demo-248
+6,4,4,5,64.15,Human Resources,1,demo-249
+4,6,1,3,12.09,Human Resources,0,demo-250
+10,5,5,5,4.55,Finance,0,demo-251
+5,5,2,2,35.61,Engineering,0,demo-252
+4,1,7,0,25.26,Finance,0,demo-253
+4,4,1,0,21.65,Human Resources,0,demo-254
+13,6,1,1,68.07,Engineering,1,demo-255
+11,1,8,5,41.15,Operations,1,demo-256
+1,6,1,4,10.71,Operations,1,demo-257
+7,2,8,2,59.22,Finance,1,demo-258
+8,1,4,4,37.34,Operations,0,demo-259
+4,1,5,4,2.88,Engineering,1,demo-260
+8,5,3,4,29.16,Engineering,1,demo-261
+9,5,4,3,17.14,Human Resources,1,demo-262
+2,5,0,1,30.77,Human Resources,0,demo-263
+10,4,2,2,60.3,Finance,1,demo-264
+11,3,2,2,36.05,Engineering,1,demo-265
+14,0,4,3,17.35,Engineering,1,demo-266
+12,6,6,1,67.39,Operations,1,demo-267
+10,1,2,3,69.72,Human Resources,1,demo-268
+9,3,0,0,66.17,Human Resources,0,demo-269
+6,4,5,0,3.54,Human Resources,0,demo-270
+15,2,8,0,59.3,Human Resources,1,demo-271
+8,5,5,3,25.62,Human Resources,1,demo-272
+6,2,8,2,5.15,Human Resources,0,demo-273
+8,6,1,1,68.26,Human Resources,1,demo-274
+10,4,5,1,13.93,Human Resources,1,demo-275
+1,0,2,5,23.31,Human Resources,0,demo-276
+4,4,8,1,22.96,Finance,1,demo-277
+9,4,5,4,57.98,Human Resources,1,demo-278
+9,3,0,2,23.19,Engineering,0,demo-279
+9,6,0,4,33.22,Operations,1,demo-280
+15,1,8,5,50.48,Human Resources,1,demo-281
+7,0,1,1,1.33,Finance,0,demo-282
+13,5,3,3,35.13,Human Resources,1,demo-283
+1,5,2,4,14.51,Finance,0,demo-284
+15,4,6,2,66.97,Human Resources,1,demo-285
+10,4,5,5,54.04,Finance,1,demo-286
+6,1,4,4,20.89,Finance,0,demo-287
+6,5,7,2,33.59,Finance,1,demo-288
+12,3,5,1,20.33,Finance,0,demo-289
+2,2,7,5,17.95,Human Resources,0,demo-290
+8,4,4,1,7.65,Operations,1,demo-291
+7,5,3,0,7.01,Finance,0,demo-292
+3,5,2,0,67.52,Operations,1,demo-293
+15,3,3,2,22.48,Engineering,0,demo-294
+2,5,3,4,51.71,Engineering,0,demo-295
+5,3,2,0,69.8,Human Resources,0,demo-296
+5,5,4,0,0.65,Engineering,0,demo-297
+10,2,7,5,38.03,Human Resources,0,demo-298
+4,6,8,3,19.1,Engineering,1,demo-299
+14,5,4,5,13.03,Finance,1,demo-300
+6,1,6,3,36.07,Engineering,0,demo-301
+3,1,2,3,22.65,Operations,1,demo-302
+12,1,7,2,66.78,Finance,1,demo-303
+0,2,5,5,16.54,Engineering,0,demo-304
+5,3,8,5,53.89,Engineering,1,demo-305
+9,2,3,1,67.02,Human Resources,1,demo-306
+11,3,8,3,53.01,Operations,1,demo-307
+2,4,7,4,49.26,Engineering,0,demo-308
+3,0,8,4,14.15,Operations,0,demo-309
+14,0,3,5,40.82,Engineering,0,demo-310
+14,6,0,3,9.24,Human Resources,1,demo-311
+1,4,7,5,56.48,Engineering,1,demo-312
+0,5,3,4,5.11,Human Resources,0,demo-313
+2,4,0,0,69.03,Human Resources,1,demo-314
+13,1,2,5,68.48,Human Resources,1,demo-315
+12,3,6,3,5.62,Operations,1,demo-316
+11,0,2,4,27.51,Operations,0,demo-317
+7,6,0,0,68.49,Human Resources,1,demo-318
+13,4,6,1,17.33,Finance,1,demo-319
+6,5,1,0,56.66,Human Resources,1,demo-320
+0,1,3,0,7.06,Engineering,0,demo-321
+1,1,0,3,30.73,Operations,0,demo-322
+1,1,8,2,16.39,Finance,0,demo-323
+10,1,4,1,69.0,Operations,1,demo-324
+8,0,8,4,61.58,Operations,0,demo-325
+13,4,7,0,68.06,Human Resources,1,demo-326
+10,5,6,3,10.45,Human Resources,1,demo-327
+15,1,3,2,60.03,Operations,1,demo-328
+1,4,6,3,39.01,Operations,1,demo-329
+8,1,5,5,5.53,Human Resources,0,demo-330
+2,4,3,0,18.79,Engineering,0,demo-331
+6,6,8,1,33.56,Finance,1,demo-332
+0,1,3,5,8.21,Human Resources,0,demo-333
+6,3,3,4,22.51,Finance,1,demo-334
+11,2,4,2,35.9,Human Resources,1,demo-335
+15,6,5,1,25.95,Human Resources,1,demo-336
+7,5,2,0,18.25,Human Resources,1,demo-337
+6,2,3,3,39.89,Operations,0,demo-338
+10,2,7,5,44.92,Human Resources,1,demo-339
+11,1,2,5,38.26,Operations,0,demo-340
+1,4,0,0,66.16,Engineering,0,demo-341
+13,1,3,0,49.5,Engineering,1,demo-342
+14,2,0,4,44.64,Human Resources,1,demo-343
+0,0,8,4,28.79,Engineering,0,demo-344
+8,4,4,0,35.16,Human Resources,0,demo-345
+5,0,1,4,10.42,Operations,0,demo-346
+8,6,5,2,55.65,Engineering,1,demo-347
+12,3,3,5,15.81,Engineering,1,demo-348
+1,0,6,3,26.4,Human Resources,1,demo-349
+0,5,2,0,34.99,Human Resources,0,demo-350
+10,4,1,4,64.34,Operations,1,demo-351
+15,2,0,0,47.91,Finance,0,demo-352
+1,1,5,0,67.3,Operations,0,demo-353
+12,0,4,1,39.48,Human Resources,0,demo-354
+10,3,2,5,50.69,Finance,1,demo-355
+13,1,1,2,42.36,Human Resources,0,demo-356
+10,0,4,3,34.34,Finance,0,demo-357
+12,3,2,5,41.01,Human Resources,1,demo-358
+9,6,3,5,5.15,Finance,1,demo-359
+4,5,6,2,25.25,Engineering,1,demo-360
+9,3,5,2,7.16,Engineering,1,demo-361
+14,4,8,4,28.56,Engineering,1,demo-362
+2,4,5,3,0.86,Human Resources,0,demo-363
+2,5,8,1,40.04,Operations,0,demo-364
+5,1,4,2,18.79,Operations,1,demo-365
+13,2,6,2,33.9,Engineering,1,demo-366
+7,5,7,4,43.17,Human Resources,1,demo-367
+9,0,6,2,58.91,Human Resources,0,demo-368
+10,3,5,3,57.08,Operations,1,demo-369
+6,3,5,1,67.52,Finance,1,demo-370
+15,4,3,2,26.32,Human Resources,1,demo-371
+6,4,8,1,47.72,Engineering,0,demo-372
+14,5,3,3,55.84,Engineering,1,demo-373
+13,5,7,1,44.33,Operations,1,demo-374
+4,5,6,3,5.18,Human Resources,0,demo-375
+13,4,0,2,49.11,Engineering,1,demo-376
+7,5,5,1,45.29,Engineering,1,demo-377
+12,6,5,3,7.42,Engineering,1,demo-378
+7,3,5,3,32.41,Operations,1,demo-379
+0,3,1,2,29.12,Engineering,1,demo-380
+4,2,4,2,31.87,Operations,0,demo-381
+11,3,1,3,50.54,Human Resources,1,demo-382
+9,0,1,0,59.44,Engineering,0,demo-383
+5,5,3,4,12.21,Operations,1,demo-384
+13,3,3,3,44.08,Operations,1,demo-385
+13,3,0,5,42.99,Operations,1,demo-386
+13,3,0,5,15.04,Finance,0,demo-387
+2,4,1,4,13.09,Finance,1,demo-388
+3,2,7,4,67.61,Finance,0,demo-389
+12,4,1,2,24.64,Human Resources,1,demo-390
+9,4,1,5,9.38,Engineering,1,demo-391
+3,1,5,5,9.9,Human Resources,0,demo-392
+4,4,6,3,13.0,Operations,0,demo-393
+15,2,2,1,22.02,Human Resources,1,demo-394
+11,0,7,1,13.66,Human Resources,0,demo-395
+15,3,7,3,49.71,Human Resources,1,demo-396
+2,4,0,1,20.45,Finance,1,demo-397
+9,1,7,4,51.98,Human Resources,1,demo-398
+3,4,1,2,54.26,Finance,0,demo-399
