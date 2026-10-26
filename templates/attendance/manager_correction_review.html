@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager - Attendance Corrections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 16px;
+            background: #f5f6fa;
+        }
+
+        h1 { color: #222; }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 16px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px #0001;
+        }
+
+        .muted { color: #666; }
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 70px;
+            margin: 8px 0;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            margin-right: 8px;
+        }
+
+        .approve { background: #16803c; }
+        .reject { background: #c62828; }
+    </style>
+</head>
+<body>
+
+    <h1>Attendance Correction Review</h1>
+    <p class="muted">Review pending requests from your assigned employees.</p>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    {% for correction in corrections %}
+        <div class="card">
+            <h3>Correction #{{ correction.pk }}</h3>
+
+            <p><strong>Employee:</strong>
+                {{ correction.employee }}</p>
+
+            <p><strong>Requested date:</strong>
+                {{ correction.corrected_punch_date }}</p>
+
+            <p><strong>Requested time:</strong>
+                {{ correction.corrected_punch_time }}</p>
+
+            <p><strong>Punch type:</strong>
+                {{ correction.corrected_punch_type }}</p>
+
+            <p><strong>Reason:</strong>
+                {{ correction.reason }}</p>
+
+            <form method="post"
+                  action="{% url 'manager-review-correction-action' correction.pk %}">
+                {% csrf_token %}
+
+                <label for="comment-{{ correction.pk }}">
+                    Manager comment
+                </label>
+
+                <textarea
+                    id="comment-{{ correction.pk }}"
+                    name="manager_comment"
+                    placeholder="Enter your review comment (optional)"
+                ></textarea>
+
+                <button class="approve"
+                        type="submit"
+                        name="decision"
+                        value="APPROVE">
+                    Approve
+                </button>
+
+                <button class="reject"
+                        type="submit"
+                        name="decision"
+                        value="REJECT">
+                    Reject
+                </button>
+            </form>
+        </div>
+    {% empty %}
+        <div class="card">
+            <p>No pending correction requests found.</p>
+        </div>
+    {% endfor %}
+
+</body>
+</html>

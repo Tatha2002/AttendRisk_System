@@ -26,6 +26,13 @@ from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404
 from django.db import transaction
 
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.http import require_POST
+
+from .models import AttendanceCorrection, Employee
+
 
 def is_hr_user(user):
     """
@@ -543,3 +550,108 @@ def hr_correction_finalize(request):
         "attendance/hr_correction_finalize.html",
         {"corrections": approved_corrections},
     )
+
+
+
+@login_required
+def manager_correction_review(request):
+    # Only Managers and superusers can access this page.
+    role = str(getattr(request.user, "role", "") or "")
+    role = role.strip().upper().replace("-", "_").replace(" ", "_")
+
+    if not (request.user.is_superuser or role == "MANAGER"):
+        messages.error(request, "Only Managers can review corrections.")
+        return redirect("home")  # Replace if your home URL has another name.
+
+    # Find the Employee profile linked to the logged-in Manager.
+    manager_employee = Employee.objects.filter(
+        user=request.user
+    ).first()
+
+    if not manager_employee and not request.user.is_superuser:
+        messages.error(
+            request,
+            "Your Manager account is not linked to an Employee profile."
+        )
+        return redirect("home")
+
+    # Managers see requests belonging to their assigned employees.
+    pending_requests = AttendanceCorrection.objects.filter(
+        status="PENDING"
+    ).select_related("employee")
+
+    if not request.user.is_superuser:
+        pending_requests = pending_requests.filter(
+            employee__manager=manager_employee
+        )
+
+    pending_requests = pending_requests.order_by("-id")
+
+    return render(
+        request,
+        "attendance/manager_correction_review.html",
+        {"corrections": pending_requests},
+    )
+
+
+@login_required
+@require_POST
+def manager_review_correction_action(request, correction_id):
+    role = str(getattr(request.user, "role", "") or "")
+    role = role.strip().upper().replace("-", "_").replace(" ", "_")
+
+    if not (request.user.is_superuser or role == "MANAGER"):
+        messages.error(request, "Only Managers can review corrections.")
+        return redirect("home")
+
+    manager_employee = Employee.objects.filter(
+        user=request.user
+    ).first()
+
+    if not manager_employee and not request.user.is_superuser:
+        messages.error(
+            request,
+            "Your Manager account is not linked to an Employee profile."
+        )
+        return redirect("home")
+
+    # Restrict the request to pending items assigned to this Manager.
+    corrections = AttendanceCorrection.objects.filter(status="PENDING")
+
+    if not request.user.is_superuser:
+        corrections = corrections.filter(
+            employee__manager=manager_employee
+        )
+
+    correction = get_object_or_404(corrections, pk=correction_id)
+
+    decision = request.POST.get("decision", "").strip().upper()
+    manager_comment = request.POST.get("manager_comment", "").strip()
+
+    if decision not in ("APPROVE", "REJECT"):
+        messages.error(request, "Invalid review action.")
+        return redirect("manager-correction-review")
+
+    correction.status = (
+        "MANAGER_APPROVED"
+        if decision == "APPROVE"
+        else "MANAGER_REJECTED"
+    )
+    correction.manager_reviewed_by = request.user
+    correction.manager_comment = manager_comment
+    correction.save(
+        update_fields=[
+            "status",
+            "manager_reviewed_by",
+            "manager_comment",
+        ]
+    )
+
+    messages.success(
+        request,
+        "Correction approved."
+        if decision == "APPROVE"
+        else "Correction rejected.",
+    )
+
+    return redirect("manager-correction-review")
