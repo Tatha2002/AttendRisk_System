@@ -553,17 +553,19 @@ def hr_correction_finalize(request):
 
 
 
+
+
 @login_required
 def manager_correction_review(request):
-    # Only Managers and superusers can access this page.
+    # 1. Allow only Managers and superusers.
     role = str(getattr(request.user, "role", "") or "")
     role = role.strip().upper().replace("-", "_").replace(" ", "_")
 
     if not (request.user.is_superuser or role == "MANAGER"):
         messages.error(request, "Only Managers can review corrections.")
-        return redirect("home")  # Replace if your home URL has another name.
+        return redirect("home")
 
-    # Find the Employee profile linked to the logged-in Manager.
+    # 2. Find the Employee profile linked to the logged-in Manager.
     manager_employee = Employee.objects.filter(
         user=request.user
     ).first()
@@ -575,23 +577,39 @@ def manager_correction_review(request):
         )
         return redirect("home")
 
-    # Managers see requests belonging to their assigned employees.
+    # 3. Fetch pending correction requests.
+    # IMPORTANT: The database stores the status as uppercase PENDING.
     pending_requests = AttendanceCorrection.objects.filter(
         status="PENDING"
     ).select_related("employee")
 
+    # 4. Managers can review only their assigned employees' requests.
+    # Superusers can review all pending requests.
     if not request.user.is_superuser:
         pending_requests = pending_requests.filter(
             employee__manager=manager_employee
         )
 
+    # 5. Show the newest requests first.
     pending_requests = pending_requests.order_by("-id")
 
+    # 6. Debug information in the Django terminal.
+    print("Logged-in user:", request.user)
+    print("User role:", role)
+    print("Manager employee:", manager_employee)
+    print("Total pending corrections:",
+          AttendanceCorrection.objects.filter(status="PENDING").count())
+    print("Pending corrections visible to this manager:",
+          pending_requests.count())
+
+    # 7. Render the manager review page.
     return render(
         request,
         "attendance/manager_correction_review.html",
         {"corrections": pending_requests},
     )
+
+    
 
 
 @login_required
