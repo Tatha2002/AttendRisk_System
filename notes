@@ -1,0 +1,14 @@
+Execution
+
+- Existing HR-managed employee records are authoritative. Imports never create accounts or overwrite employee organization data. Create staff through admin before import.
+- Attendance is first IN / last OUT per calendar date. Overnight time spans are supported in standalone summaries; overnight biometric punches must use the shift date. Split shifts, holidays and employment termination are outside this prototype.
+- More than 10 minutes is late on dashboard/SQL; employee shift grace is used in ML features. Default shift grace is 10. Imported delay uses the configured employee shift where available.
+- Absence = weekday without punches or approved leave after account joining, in the last 30 days. Actual hire dates and holiday calendars should replace this approximation.
+- Manager approval applies only to assigned direct reports. HR cannot bypass manager approval. Finalization replaces punches for that day transactionally. Preserve original biometric files in import batches.
+- HR invitations are environment controlled. Email verification uses expiring signed tokens. Console email is local testing only. SMTP is configurable. No mail is sent externally by default.
+
+
+BACKGROUND PROCESSING
+- Celery imports handle validation, anomaly computation, NLP and subsequent scoring. Batch progress/failures are stored. Celery task results use Redis; AsyncResult(task_id) can inspect scoring failures from the worker. Do not use eager mode for normal evaluation.
+- IO work benefits from threads; CPU-bound Python work benefits from separate processes due to the GIL. Celery normally uses worker processes; macOS can use --pool=solo for a simple local prototype.
+- The streaming CSV iterator validates rows, then import materializes a bounded (10 MB) file for progress counting. XLSX uses Pandas. Large-scale ingestion should be chunked.
